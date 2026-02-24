@@ -300,27 +300,17 @@ body {
 .widget dt {
   font-weight: bold;
 }
-#header {
+##header {
   height: 300px;
   position: relative;
   border-bottom: 1px solid #ddd;
 }
-#header:before,
-#header:after {
+##header:after {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
   height: 40px;
-}
-#header:before {
-  top: 0;
-  background: -webkit-linear-gradient(rgba(0,0,0,0.2), transparent);
-  background: -moz-linear-gradient(rgba(0,0,0,0.2), transparent);
-  background: -ms-linear-gradient(rgba(0,0,0,0.2), transparent);
-  background: linear-gradient(rgba(0,0,0,0.2), transparent);
-}
-#header:after {
   bottom: 0;
   background: -webkit-linear-gradient(transparent, rgba(0,0,0,0.2));
   background: -moz-linear-gradient(transparent, rgba(0,0,0,0.2));
@@ -337,7 +327,7 @@ body {
   left: 0;
   width: 100%;
   max-width: 100% !important;
-  height: 20%;
+  height: 60px;
   background: rgba(255,255,255,0.15);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
