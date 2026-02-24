@@ -300,12 +300,12 @@ body {
 .widget dt {
   font-weight: bold;
 }
-##header {
+#header {
   height: 300px;
   position: relative;
   border-bottom: 1px solid #ddd;
 }
-##header:after {
+#header:after {
   content: "";
   position: absolute;
   left: 0;
@@ -326,9 +326,8 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  max-width: 100% !important;
   height: 60px;
-  background: rgba(36,31,31,0.55);
+  background: rgba(255,255,255,0.45);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   -webkit-box-shadow: 0 2px 15px rgba(0,0,0,0.1);
@@ -341,7 +340,7 @@ body {
 }
 #banner {
   position: absolute;
-  top: 20%;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
