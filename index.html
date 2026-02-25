@@ -234,7 +234,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ichika2004.github.io/Blog/2026/02/25/%E6%AD%A1%E8%BF%8E%E4%BE%86%E5%88%B0-Joeys-Blog/" data-id="cuid960FcO3PN1tsy3uP5xu4j" data-title="沒什麼，只是 Joey的 Blog" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://ichika2004.github.io/Blog/2026/02/25/%E6%AD%A1%E8%BF%8E%E4%BE%86%E5%88%B0-Joeys-Blog/" data-id="cuid8MYMZ-1U2TL6zv89PVoUR" data-title="沒什麼，只是 Joey的 Blog" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -321,7 +321,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ichika2004.github.io/Blog/2026/02/24/%E7%AC%AC%E4%B8%80%E9%80%B1/" data-id="cuidb1ZYSOF1q5AGwqY8mhh9d" data-title="Week 1" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://ichika2004.github.io/Blog/2026/02/24/%E7%AC%AC%E4%B8%80%E9%80%B1/" data-id="cuidShpURR0-4uIogM8a_OhXo" data-title="Week 1" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -442,11 +442,11 @@ mjx-container[display="true"] + br {
 
 <p><img src="https://hackmd.io/_uploads/BJmv7ZnuWx.png" alt="使用反函數加權"></p>
 <h3 id="方法-2：高斯函數加權-Gaussian-Weighting"><a href="#方法-2：高斯函數加權-Gaussian-Weighting" class="headerlink" title="方法 2：高斯函數加權 (Gaussian Weighting)"></a>方法 2：高斯函數加權 (Gaussian Weighting)</h3><p>高斯函數（常態分佈曲線）是一種更平滑的加權方式。給定一個參數 <code>sigma</code> 來控制權重遞減的速度。</p>
-<p><img src="https://hackmd.io/_uploads/B1iiX-2OZe.png" alt="不同sigma下的高斯函數"></p>
+<p><img src="https://hackmd.io/_uploads/SkUDLU3dZx.png" alt="不同sigma下的高斯函數"></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sigma 為自訂參數</span></span><br><span class="line"><span class="keyword">for</span> _, train_instance <span class="keyword">in</span> train_data.iterrows():</span><br><span class="line">    <span class="comment"># ...前面計算歐氏距離 (dist)...</span></span><br><span class="line">    weight = mt.exp(-dist**<span class="number">2</span> / (<span class="number">2</span> * (sigma**<span class="number">2</span>)))</span><br><span class="line">    distances.append((weight, train_instance[<span class="string">'Outcome'</span>]))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 依照權重由大到小排序 (因為權重越大代表越近)</span></span><br><span class="line">distances.sort(key=<span class="keyword">lambda</span> x: x[<span class="number">0</span>], reverse=<span class="literal">True</span>)</span><br><span class="line">neighbors = distances[:k]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> weight, outcome <span class="keyword">in</span> neighbors:</span><br><span class="line">    votes[<span class="built_in">str</span>(<span class="built_in">int</span>(outcome))] += weight</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p><img src="https://hackmd.io/_uploads/B1IR7b2Obg.png" alt="使用高斯函數加權"></p>
-<p><strong>討論：為何反函數加權結果與一般K-NN相似</strong></p>
+<p><strong>討論：為何高斯函數加權結果與一般K-NN相似</strong></p>
 <p>這點可以從高斯函數解釋，當執行標準化後，資料尺度被縮到(-1,1)，導致其權重相差不大</p>
 <hr>
 <h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>透過親手實作 <code>knn</code> 函數，我們不僅徹底理解了資料標準化的重要性，也掌握了如何抽換「距離公式」與「投票加權機制」。這些底層邏輯的熟悉度，將成為未來在微調機器學習模型參數時，最強大的基礎！</p>
@@ -455,7 +455,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ichika2004.github.io/Blog/2023/05/19/Diabetes-prediction-using-K-Nearest-Neighbors/" data-id="cuidyxChzd362PgwGI3By_SfV" data-title="機器學習入門：k-NN (k-Nearest Neighbors) 演算法詳解" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://ichika2004.github.io/Blog/2023/05/19/Diabetes-prediction-using-K-Nearest-Neighbors/" data-id="cuid5RMwt5sT_E8IhBnA1dkeP" data-title="機器學習入門：k-NN (k-Nearest Neighbors) 演算法詳解" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
