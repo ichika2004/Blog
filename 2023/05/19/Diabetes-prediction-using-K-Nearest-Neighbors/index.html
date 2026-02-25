@@ -13,13 +13,19 @@
 <meta property="og:site_name" content="Joey&#39;s Blog">
 <meta property="og:description" content="在機器學習的世界裡，k-NN (k-最近鄰) 演算法以其簡單、直觀的特性，成為許多初學者的第一個入門演算法。它不需要複雜的數學推導，核心思想只有一句話：「物以類聚」。 1. 什麼是 k-NN 演算法？k-NN 是一種監督式學習 (Supervised Learning) 演算法，既可以用於分類 (Classification)，也可以用於回歸 (Regression)。 它的工作原理非常直觀：當我">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://hackmd.io/_uploads/B10tWbn_Ze.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/SJxfm-hOZx.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/BJmv7ZnuWx.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/B1iiX-2OZe.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/B1IR7b2Obg.png">
 <meta property="article:published_time" content="2023-05-19T02:56:06.000Z">
-<meta property="article:modified_time" content="2026-02-25T04:57:26.757Z">
+<meta property="article:modified_time" content="2026-02-25T05:08:56.782Z">
 <meta property="article:author" content="Joey">
 <meta property="article:tag" content="Blog">
 <meta property="article:tag" content="Joey">
 <meta property="article:tag" content="Personal">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hackmd.io/_uploads/B10tWbn_Ze.png">
   
     <link rel="alternate" href="/Blog/atom.xml" title="Joey's Blog" type="application/atom+xml">
   
@@ -124,11 +130,13 @@
 </ul>
 </li>
 </ol>
-
 <hr>
 <h2 id="3-如何計算「距離」？"><a href="#3-如何計算「距離」？" class="headerlink" title="3. 如何計算「距離」？"></a>3. 如何計算「距離」？</h2><p>「距離」的定義決定了鄰居的選取。最常用的計算方法包括：</p>
 <ul>
-<li><strong>歐氏距離 (Euclidean Distance)</strong>：最常見的直線距離（L2 範數）。<br>  $$d &#x3D; \sqrt{\sum_{i&#x3D;1}^{n} (x_i - y_i)^2}$$</li>
+<li><strong>歐氏距離 (Euclidean Distance)</strong>：最常見的直線距離（L2 範數）。</li>
+</ul>
+<p>$$d &#x3D; \sqrt{\sum_{i&#x3D;1}^{n} (x_i - y_i)^2}$$</p>
+<ul>
 <li><strong>曼哈頓距離 (Manhattan Distance)</strong>：城市街區距離（L1 範數）。</li>
 <li><strong>閔可夫斯基距離 (Minkowski Distance)</strong>：上述兩者的推廣形式。</li>
 </ul>
@@ -179,25 +187,20 @@
 <hr>
 <h2 id="3-尋找最佳的-K-值"><a href="#3-尋找最佳的-K-值" class="headerlink" title="3. 尋找最佳的 K 值"></a>3. 尋找最佳的 K 值</h2><p>K 值的選擇會大幅影響準確率。一般來說，K 值建議選擇<strong>奇數</strong>（避免平手），且最大搜尋範圍通常設定在<strong>訓練集資料筆數的平方根</strong>。我們可以使用迴圈來測試不同的 K 值，並視覺化結果：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 取得訓練資料筆數的平方根做為最大 K 值</span></span><br><span class="line">k_max = <span class="built_in">int</span>(mt.sqrt(<span class="built_in">len</span>(train_data)))  </span><br><span class="line">k_values = <span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">1</span>, k_max, <span class="number">2</span>))</span><br><span class="line">accuracy_euil = []</span><br><span class="line"></span><br><span class="line"><span class="comment"># 測試不同的 K 值</span></span><br><span class="line"><span class="keyword">for</span> k <span class="keyword">in</span> k_values:</span><br><span class="line">    predictions = knn(train_data, test_data, k)</span><br><span class="line">    true_outcome = test_data[<span class="string">&#x27;Outcome&#x27;</span>].tolist()</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 計算準確率</span></span><br><span class="line">    correct_predictions = <span class="built_in">sum</span>(<span class="number">1</span> <span class="keyword">for</span> true, pred <span class="keyword">in</span> <span class="built_in">zip</span>(true_outcome, predictions) <span class="keyword">if</span> true == pred)</span><br><span class="line">    accuracy = correct_predictions / <span class="built_in">len</span>(true_outcome)</span><br><span class="line">    accuracy_euil.append(accuracy)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-<hr>
-<h2 id="4-進階實作-一-：變更距離標準-曼哈頓距離"><a href="#4-進階實作-一-：變更距離標準-曼哈頓距離" class="headerlink" title="4. 進階實作 (一)：變更距離標準 - 曼哈頓距離"></a>4. 進階實作 (一)：變更距離標準 - 曼哈頓距離</h2><p>除了直線的歐氏距離，有時候在特定維度特徵下，使用<strong>曼哈頓距離 (Manhattan Distance, 絕對值相加)</strong> 會有更好的效果。實作上，我們只需要修改距離的計算方式：</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><img src="https://hackmd.io/_uploads/B10tWbn_Ze.png" alt="不同k值的準確率"></h2><h2 id="4-進階實作-一-：變更距離標準-曼哈頓距離"><a href="#4-進階實作-一-：變更距離標準-曼哈頓距離" class="headerlink" title="4. 進階實作 (一)：變更距離標準 - 曼哈頓距離"></a>4. 進階實作 (一)：變更距離標準 - 曼哈頓距離</h2><p>除了直線的歐氏距離，有時候在特定維度特徵下，使用<strong>曼哈頓距離 (Manhattan Distance, 絕對值相加)</strong> 會有更好的效果。實作上，我們只需要修改距離的計算方式：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 曼哈頓距離計算範例</span></span><br><span class="line">dist = (<span class="built_in">abs</span>(test_instance[<span class="number">0</span>] - train_instance[<span class="number">0</span>]) +</span><br><span class="line">        <span class="built_in">abs</span>(test_instance[<span class="number">1</span>] - train_instance[<span class="number">1</span>]) +</span><br><span class="line">        <span class="built_in">abs</span>(test_instance[<span class="number">2</span>] - train_instance[<span class="number">2</span>]) +</span><br><span class="line">        <span class="comment"># ...省略其餘特徵...</span></span><br><span class="line">        <span class="built_in">abs</span>(test_instance[<span class="number">7</span>] - train_instance[<span class="number">7</span>]))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
+<p><img src="https://hackmd.io/_uploads/SJxfm-hOZx.png" alt="將歐式距離改成曼哈頓距離"></p>
 <hr>
 <h2 id="5-進階實作-二-：距離加權投票-Weighted-k-NN"><a href="#5-進階實作-二-：距離加權投票-Weighted-k-NN" class="headerlink" title="5. 進階實作 (二)：距離加權投票 (Weighted k-NN)"></a>5. 進階實作 (二)：距離加權投票 (Weighted k-NN)</h2><p>傳統 k-NN 有個缺點：「只要擠進前 K 名，每一票的份量都一樣重」。但直覺上，<strong>距離越近的鄰居，應該要有越高的參考價值</strong>。這時我們可以引入「加權機制」。</p>
 <h3 id="方法-1：反函數加權-Inverse-Distance-Weighting"><a href="#方法-1：反函數加權-Inverse-Distance-Weighting" class="headerlink" title="方法 1：反函數加權 (Inverse Distance Weighting)"></a>方法 1：反函數加權 (Inverse Distance Weighting)</h3><p>將距離取倒數，距離越近，權重越大。（加上 $10^{-10}$ 是為了避免距離為 0 時發生除以零的錯誤）。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">votes = &#123;<span class="string">&#x27;0&#x27;</span>: <span class="number">0</span>, <span class="string">&#x27;1&#x27;</span>: <span class="number">0</span>&#125;</span><br><span class="line"><span class="keyword">for</span> dist, outcome <span class="keyword">in</span> neighbors:</span><br><span class="line">    votes[<span class="built_in">str</span>(<span class="built_in">int</span>(outcome))] += <span class="number">1</span> / (dist + <span class="number">10</span>**(-<span class="number">10</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-
+<p><img src="https://hackmd.io/_uploads/BJmv7ZnuWx.png" alt="使用反函數加權"></p>
 <h3 id="方法-2：高斯函數加權-Gaussian-Weighting"><a href="#方法-2：高斯函數加權-Gaussian-Weighting" class="headerlink" title="方法 2：高斯函數加權 (Gaussian Weighting)"></a>方法 2：高斯函數加權 (Gaussian Weighting)</h3><p>高斯函數（常態分佈曲線）是一種更平滑的加權方式。給定一個參數 <code>sigma</code> 來控制權重遞減的速度。</p>
-
-
+<p><img src="https://hackmd.io/_uploads/B1iiX-2OZe.png" alt="不同sigma下的高斯函數"></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sigma 為自訂參數</span></span><br><span class="line"><span class="keyword">for</span> _, train_instance <span class="keyword">in</span> train_data.iterrows():</span><br><span class="line">    <span class="comment"># ...前面計算歐氏距離 (dist)...</span></span><br><span class="line">    weight = mt.exp(-dist**<span class="number">2</span> / (<span class="number">2</span> * (sigma**<span class="number">2</span>)))</span><br><span class="line">    distances.append((weight, train_instance[<span class="string">&#x27;Outcome&#x27;</span>]))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 依照權重由大到小排序 (因為權重越大代表越近)</span></span><br><span class="line">distances.sort(key=<span class="keyword">lambda</span> x: x[<span class="number">0</span>], reverse=<span class="literal">True</span>)</span><br><span class="line">neighbors = distances[:k]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> weight, outcome <span class="keyword">in</span> neighbors:</span><br><span class="line">    votes[<span class="built_in">str</span>(<span class="built_in">int</span>(outcome))] += weight</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-
+<p><img src="https://hackmd.io/_uploads/B1IR7b2Obg.png" alt="使用高斯函數加權"></p>
 <p><strong>討論：為何反函數加權結果與一般K-NN相似</strong></p>
 <p>這點可以從高斯函數解釋，當執行標準化後，資料尺度被縮到(-1,1)，導致其權重相差不大</p>
 <hr>
@@ -207,7 +210,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ichika2004.github.io/Blog/2023/05/19/Diabetes-prediction-using-K-Nearest-Neighbors/" data-id="cuid20g0opFQw67wL02nsOZrR" data-title="機器學習入門：k-NN (k-Nearest Neighbors) 演算法詳解" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://ichika2004.github.io/Blog/2023/05/19/Diabetes-prediction-using-K-Nearest-Neighbors/" data-id="cuidch2srIXe8r-8wIz-EclUv" data-title="機器學習入門：k-NN (k-Nearest Neighbors) 演算法詳解" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
