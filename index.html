@@ -234,7 +234,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ichika2004.github.io/Blog/2026/02/25/%E6%AD%A1%E8%BF%8E%E4%BE%86%E5%88%B0-Joeys-Blog/" data-id="cuidjWatqUcXTSgFtPHzbUl7W" data-title="沒什麼，只是 Joey的 Blog" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://ichika2004.github.io/Blog/2026/02/25/%E6%AD%A1%E8%BF%8E%E4%BE%86%E5%88%B0-Joeys-Blog/" data-id="cuidu5FpZksw4kgDEwqjYZ_XA" data-title="沒什麼，只是 Joey的 Blog" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -370,7 +370,7 @@ mjx-container[display="true"] + br {
 <p>按下 <code>Get Primers</code> 之後，喝口水，Primer-BLAST 就會給你一份完美的報告，列出最優質的引子對（包含序列、長度、Tm 值以及在基因上的結合位置）<br><img src="https://hackmd.io/_uploads/HJFZ9qyjWg.png" alt="引子查詢結果"></p>
 <p>接著去<a target="_blank" rel="noopener" href="https://www.thermofisher.com/tw/zt/home/brands/thermo-scientific/molecular-biology/molecular-biology-learning-center/molecular-biology-resource-library/thermo-scientific-web-tools/multiple-primer-analyzer.html?CID=gsd_cap_lcs_r04_jp_cp1425_pjt7520_gsd00000_0so_blg_op_awa_og_s00_ce_primersdesign_gsd_ts_Social_LAB&ef_id=CjwKCAjwg_nNBhAGEiwAiYPYA_offllrMfzFrU5e_lr9c5X_trFR19RGFzXgBTXUm7-CBygZjCY8LBoCB-AQAvD_BwE:G:s&s_kwcid=AL!3652!3!!!!x!!!23558900330!&cid=bid_cbu_sbu_r04_tw_cp1358_pjt09345_apjcorppm-01_0se_pmx_pa_pur_ins&gad_source=1&gad_campaignid=23553677682&gbraid=0AAAAADxi_GTj8iGYubsKGGr03MHdSdReb&gclid=CjwKCAjwg_nNBhAGEiwAiYPYA_offllrMfzFrU5e_lr9c5X_trFR19RGFzXgBTXUm7-CBygZjCY8LBoCB-AQAvD_BwE">Multiple Primer Analyzer</a>檢查這些引子的</p>
 <p>Step 1: 輸入序列 (Input Sequences)<br>這款工具的介面通常很簡單。你只需要將設計好的引子（包含 Forward 和 Reverse）以特定的格式貼進文字方塊中。</p>
-<p>格式要求：通常是一行一個引子，前面寫引子名稱，空一格後貼上序列（只能有 A、T、C、G）。<br><img src="https://hackmd.io/_uploads/H1wBcq1ibg.png" alt="引子輸入結果"></p>
+<p>格式要求：通常是一行一個引子，前面寫引子名稱，空一格後貼上序列（只能有 A、T、C、G）。<br><img src="https://hackmd.io/_uploads/ry8uD2_ibl.png" alt="引子輸入結果"></p>
 <p>例如：<br>Forward_1 ATCGATCGATCGATCG<br>Reverse_1 CGATCGATCGATCGAT</p>
 <p>Step 2: 檢查 Tm 值與 CG 含量 (Tm and CG% Check)<br>按下分析後，系統會列出每一條引子的物理特性：</p>
 <p>Tm 值匹配：再次確認 F 和 R 兩條引子的融解溫度是否夠接近（最好相差在 2~5°C 以內）。</p>
@@ -378,7 +378,6 @@ mjx-container[display="true"] + br {
 <p>Step 3: 揪出「自我配對」與「髮夾結構」 (Self-Dimers &amp; Hairpins)<br>這是工具的第一大看點。系統會檢查同一條引子會不會自己發生悲劇：</p>
 <p>髮夾結構 (Hairpin)：引子的頭跟尾會不會剛好互補，導致自己摺疊起來變成一個髮夾的形狀？</p>
 <p>自我二聚體 (Self-Dimer)：兩條一模一樣的 Forward 引子，會不會在溶液中互相黏在一起？</p>
-<p>判讀重點：如果系統跑出紅字，或者顯示配對的分數（Score &#x2F; dG 值）過高，代表這條引子很容易自己「打結」，最好重新設計。</p>
 <p>Step 4: 揪出「交叉配對」 (Cross-Dimers)<br>這是 Multiple Primer Analyzer 最強大的功能！當你把 F 和 R 兩條引子同時貼進去時，系統會幫你檢查：</p>
 <p>引子二聚體 (Primer Dimer)：Forward 引子和 Reverse 引子會不會不去黏目標 DNA，反而互相擁抱黏在一起？</p>
 <p>尤其在引子的「3’ 端（尾巴）」如果發生連續幾個鹼基互補（或是出現重複的鹼基），這是最致命的！因為 DNA 聚合酶是從 3’ 端開始複製，一旦 3’ 端互相黏住，聚合酶就會立刻開始複製這個錯誤的二聚體，導致你的 PCR 產物全都是垃圾。</p>
@@ -392,7 +391,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ichika2004.github.io/Blog/2026/03/30/Week5/" data-id="cuidUyAQjJK7oIJfCT0d1-bBl" data-title="Week5" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://ichika2004.github.io/Blog/2026/03/30/Week5/" data-id="cuidlx8pXs1U-9DNjLUHkcbgO" data-title="Week5" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -495,7 +494,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ichika2004.github.io/Blog/2026/03/17/Week4/" data-id="cuid_TJALl-R2G8uGwjpLpGJG" data-title="Week4" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://ichika2004.github.io/Blog/2026/03/17/Week4/" data-id="cuidQODN63g3EPfil1PkCXobl" data-title="Week4" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -547,7 +546,94 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ichika2004.github.io/Blog/2026/03/10/Week3/" data-id="cuidNq-OHP7EzAflQX0itqhUA" data-title="Week3" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://ichika2004.github.io/Blog/2026/03/10/Week3/" data-id="cuidrzGCwpzYC7fFuBlY_A3Bq" data-title="Week3" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-第一週" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/Blog/2026/02/24/%E7%AC%AC%E4%B8%80%E9%80%B1/" class="article-date">
+  <time class="dt-published" datetime="2026-02-24T06:00:00.000Z" itemprop="datePublished">2026-02-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/Blog/categories/bioinformatics/">生物資訊初探</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/Blog/2026/02/24/%E7%AC%AC%E4%B8%80%E9%80%B1/">Week 1</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <H3>前言-課程介紹：</H3>
+* 評分標準
+1. 課堂問答+Kahoot 25%
+2. 課堂筆記 25% (寫在部落格上，期末需要有8篇)
+3. 期中上機測驗25%
+4. 期末小組(最多2人一組)報告 （25%）
+
+<ul>
+<li>課程進行方式</li>
+</ul>
+<ol>
+<li>看課前閱讀資料</li>
+<li>課堂主題說明</li>
+<li>有課堂問答 跟 Kahoot 每節課會競賽排名</li>
+<li>動手操作，將生物的問題轉化為工程或數學問題</li>
+<li>看看已經發展出的生物資訊工具如何解決這類問題</li>
+<li>更新自己的部落格，並參加 Kahoot 每節課會競賽排名</li>
+<li>談談這種工具在生活中的實際應用</li>
+</ol>
+<ul>
+<li>課程目標</li>
+</ul>
+<ol>
+<li>介紹生物資訊工具的應用</li>
+<li>以段落與專題的方式介紹常用的基礎生物資訊工具與資料庫應用</li>
+<li>知道如何分析運用生物資訊</li>
+</ol>
+<H3>【生物資訊學概論：數據如何定義現代生物學？】</H3>
+    
+<p>隨著測序技術的普及，生物學研究已從單純的實驗室觀察，演進為大數據分析的科學。</p>
+<p>一、 生物資訊學的定義與範疇生物資訊學是一門結合生物學、電腦科學與統計學的跨領域學科。其核心任務包含：</p>
+<ul>
+<li>數據管理：開發資料庫以儲存海量的生物分子資訊（如 DNA、RNA、蛋白質序列）。</li>
+<li>演算法開發：設計統計模型與運算工具，分析序列間的相似性與演化關係。</li>
+<li>知識發現：透過數據挖掘，解釋生物系統的功能與機制。</li>
+</ul>
+<p>二、 為什麼需要生物資訊？</p>
+<p>實務案例分析生物資訊並非僅限於理論研究，在實際生活與法律鑑定中扮演重要角色。例如：</p>
+<p>物種鑑定（Species Identification）：透過 DNA 序列比對（DNA Barcoding），可以精準鑑定食品成分。例如，過去曾有調查局利用 DNA 分析技術，揭發市售素食中摻雜豬、牛肉成分，或肉製品中混有非標示物種。這類鑑定需依賴精確的生物序列資料庫與比對演算法。</p>
+<p>三、 生物學的演進歷程生物資訊的興起與分子生物學的進程緊密相連：</p>
+<p>1860年代：孟德爾提出遺傳定律，建立遺傳學雛形。<br>1953年：DNA 雙螺旋結構被發現，開啟分子生物學時代。<br>1977年：Sanger 定序法問世，使人類獲得讀取遺傳密碼的能力。<br>1990-2003年：人類基因組計畫（Human Genome Project）的執行，標誌著基因組學（Genomics）的誕生，也使生物資訊學成為處理這些龐大數據的必要工具。</p>
+<p>四、 核心工具介紹：NCBI </p>
+<p>美國國家生物技術資訊中心（NCBI）是全球最重要的生物數據中心之一。</p>
+<p>五、 Week1總結與展望</p>
+<p>現代生物學正處於「第四範式」（數據驅動）的階段。掌握生物資訊工具，不僅是為了研究，更是為了能從海量的遺傳資訊中，精確地解析生命現象。對於初學者而言，熟悉 NCBI 等公開平台的檢索與應用，是進入此領域的第一步。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ichika2004.github.io/Blog/2026/02/24/%E7%AC%AC%E4%B8%80%E9%80%B1/" data-id="cuidJ9HnSj0nYO8pTnNwysOvv" data-title="Week 1" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -639,94 +725,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ichika2004.github.io/Blog/2026/02/24/Week2/" data-id="cuidK-wU_T-mn2kCn0VQ8UvJm" data-title="Week2" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-第一週" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/Blog/2026/02/24/%E7%AC%AC%E4%B8%80%E9%80%B1/" class="article-date">
-  <time class="dt-published" datetime="2026-02-24T06:00:00.000Z" itemprop="datePublished">2026-02-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/Blog/categories/bioinformatics/">生物資訊初探</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/Blog/2026/02/24/%E7%AC%AC%E4%B8%80%E9%80%B1/">Week 1</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <H3>前言-課程介紹：</H3>
-* 評分標準
-1. 課堂問答+Kahoot 25%
-2. 課堂筆記 25% (寫在部落格上，期末需要有8篇)
-3. 期中上機測驗25%
-4. 期末小組(最多2人一組)報告 （25%）
-
-<ul>
-<li>課程進行方式</li>
-</ul>
-<ol>
-<li>看課前閱讀資料</li>
-<li>課堂主題說明</li>
-<li>有課堂問答 跟 Kahoot 每節課會競賽排名</li>
-<li>動手操作，將生物的問題轉化為工程或數學問題</li>
-<li>看看已經發展出的生物資訊工具如何解決這類問題</li>
-<li>更新自己的部落格，並參加 Kahoot 每節課會競賽排名</li>
-<li>談談這種工具在生活中的實際應用</li>
-</ol>
-<ul>
-<li>課程目標</li>
-</ul>
-<ol>
-<li>介紹生物資訊工具的應用</li>
-<li>以段落與專題的方式介紹常用的基礎生物資訊工具與資料庫應用</li>
-<li>知道如何分析運用生物資訊</li>
-</ol>
-<H3>【生物資訊學概論：數據如何定義現代生物學？】</H3>
-    
-<p>隨著測序技術的普及，生物學研究已從單純的實驗室觀察，演進為大數據分析的科學。</p>
-<p>一、 生物資訊學的定義與範疇生物資訊學是一門結合生物學、電腦科學與統計學的跨領域學科。其核心任務包含：</p>
-<ul>
-<li>數據管理：開發資料庫以儲存海量的生物分子資訊（如 DNA、RNA、蛋白質序列）。</li>
-<li>演算法開發：設計統計模型與運算工具，分析序列間的相似性與演化關係。</li>
-<li>知識發現：透過數據挖掘，解釋生物系統的功能與機制。</li>
-</ul>
-<p>二、 為什麼需要生物資訊？</p>
-<p>實務案例分析生物資訊並非僅限於理論研究，在實際生活與法律鑑定中扮演重要角色。例如：</p>
-<p>物種鑑定（Species Identification）：透過 DNA 序列比對（DNA Barcoding），可以精準鑑定食品成分。例如，過去曾有調查局利用 DNA 分析技術，揭發市售素食中摻雜豬、牛肉成分，或肉製品中混有非標示物種。這類鑑定需依賴精確的生物序列資料庫與比對演算法。</p>
-<p>三、 生物學的演進歷程生物資訊的興起與分子生物學的進程緊密相連：</p>
-<p>1860年代：孟德爾提出遺傳定律，建立遺傳學雛形。<br>1953年：DNA 雙螺旋結構被發現，開啟分子生物學時代。<br>1977年：Sanger 定序法問世，使人類獲得讀取遺傳密碼的能力。<br>1990-2003年：人類基因組計畫（Human Genome Project）的執行，標誌著基因組學（Genomics）的誕生，也使生物資訊學成為處理這些龐大數據的必要工具。</p>
-<p>四、 核心工具介紹：NCBI </p>
-<p>美國國家生物技術資訊中心（NCBI）是全球最重要的生物數據中心之一。</p>
-<p>五、 Week1總結與展望</p>
-<p>現代生物學正處於「第四範式」（數據驅動）的階段。掌握生物資訊工具，不僅是為了研究，更是為了能從海量的遺傳資訊中，精確地解析生命現象。對於初學者而言，熟悉 NCBI 等公開平台的檢索與應用，是進入此領域的第一步。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://ichika2004.github.io/Blog/2026/02/24/%E7%AC%AC%E4%B8%80%E9%80%B1/" data-id="cuidHxxy1s7GwoDrjcQGuNG5h" data-title="Week 1" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://ichika2004.github.io/Blog/2026/02/24/Week2/" data-id="cuidOAWR39vjhp_UiNe_wrR4v" data-title="Week2" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -863,7 +862,7 @@ mjx-container[display="true"] + br {
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ichika2004.github.io/Blog/2023/05/19/Diabetes-prediction-using-K-Nearest-Neighbors/" data-id="cuidyTadP8YzEabcRhx4kltBA" data-title="機器學習入門：k-NN (k-Nearest Neighbors) 演算法詳解" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://ichika2004.github.io/Blog/2023/05/19/Diabetes-prediction-using-K-Nearest-Neighbors/" data-id="cuidk_sn3eX2cHpGATLZWs2Vt" data-title="機器學習入門：k-NN (k-Nearest Neighbors) 演算法詳解" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -929,7 +928,7 @@ mjx-container[display="true"] + br {
           </li>
         
           <li>
-            <a href="/Blog/2026/02/24/Week2/">Week2</a>
+            <a href="/Blog/2026/02/24/%E7%AC%AC%E4%B8%80%E9%80%B1/">Week 1</a>
           </li>
         
       </ul>

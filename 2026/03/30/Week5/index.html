@@ -20,9 +20,9 @@
 <meta property="og:image" content="https://hackmd.io/_uploads/Sk2mQK1jWx.png">
 <meta property="og:image" content="https://hackmd.io/_uploads/rk8b4FyoWx.png">
 <meta property="og:image" content="https://hackmd.io/_uploads/HJFZ9qyjWg.png">
-<meta property="og:image" content="https://hackmd.io/_uploads/H1wBcq1ibg.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/ry8uD2_ibl.png">
 <meta property="article:published_time" content="2026-03-30T07:06:44.000Z">
-<meta property="article:modified_time" content="2026-03-31T02:25:00.518Z">
+<meta property="article:modified_time" content="2026-03-31T02:56:01.609Z">
 <meta property="article:author" content="Joey">
 <meta property="article:tag" content="Blog">
 <meta property="article:tag" content="Joey">
@@ -217,7 +217,7 @@
 <p>按下 <code>Get Primers</code> 之後，喝口水，Primer-BLAST 就會給你一份完美的報告，列出最優質的引子對（包含序列、長度、Tm 值以及在基因上的結合位置）<br><img src="https://hackmd.io/_uploads/HJFZ9qyjWg.png" alt="引子查詢結果"></p>
 <p>接著去<a target="_blank" rel="noopener" href="https://www.thermofisher.com/tw/zt/home/brands/thermo-scientific/molecular-biology/molecular-biology-learning-center/molecular-biology-resource-library/thermo-scientific-web-tools/multiple-primer-analyzer.html?CID=gsd_cap_lcs_r04_jp_cp1425_pjt7520_gsd00000_0so_blg_op_awa_og_s00_ce_primersdesign_gsd_ts_Social_LAB&ef_id=CjwKCAjwg_nNBhAGEiwAiYPYA_offllrMfzFrU5e_lr9c5X_trFR19RGFzXgBTXUm7-CBygZjCY8LBoCB-AQAvD_BwE:G:s&s_kwcid=AL!3652!3!!!!x!!!23558900330!&cid=bid_cbu_sbu_r04_tw_cp1358_pjt09345_apjcorppm-01_0se_pmx_pa_pur_ins&gad_source=1&gad_campaignid=23553677682&gbraid=0AAAAADxi_GTj8iGYubsKGGr03MHdSdReb&gclid=CjwKCAjwg_nNBhAGEiwAiYPYA_offllrMfzFrU5e_lr9c5X_trFR19RGFzXgBTXUm7-CBygZjCY8LBoCB-AQAvD_BwE">Multiple Primer Analyzer</a>檢查這些引子的</p>
 <p>Step 1: 輸入序列 (Input Sequences)<br>這款工具的介面通常很簡單。你只需要將設計好的引子（包含 Forward 和 Reverse）以特定的格式貼進文字方塊中。</p>
-<p>格式要求：通常是一行一個引子，前面寫引子名稱，空一格後貼上序列（只能有 A、T、C、G）。<br><img src="https://hackmd.io/_uploads/H1wBcq1ibg.png" alt="引子輸入結果"></p>
+<p>格式要求：通常是一行一個引子，前面寫引子名稱，空一格後貼上序列（只能有 A、T、C、G）。<br><img src="https://hackmd.io/_uploads/ry8uD2_ibl.png" alt="引子輸入結果"></p>
 <p>例如：<br>Forward_1 ATCGATCGATCGATCG<br>Reverse_1 CGATCGATCGATCGAT</p>
 <p>Step 2: 檢查 Tm 值與 CG 含量 (Tm and CG% Check)<br>按下分析後，系統會列出每一條引子的物理特性：</p>
 <p>Tm 值匹配：再次確認 F 和 R 兩條引子的融解溫度是否夠接近（最好相差在 2~5°C 以內）。</p>
@@ -225,7 +225,6 @@
 <p>Step 3: 揪出「自我配對」與「髮夾結構」 (Self-Dimers &amp; Hairpins)<br>這是工具的第一大看點。系統會檢查同一條引子會不會自己發生悲劇：</p>
 <p>髮夾結構 (Hairpin)：引子的頭跟尾會不會剛好互補，導致自己摺疊起來變成一個髮夾的形狀？</p>
 <p>自我二聚體 (Self-Dimer)：兩條一模一樣的 Forward 引子，會不會在溶液中互相黏在一起？</p>
-<p>判讀重點：如果系統跑出紅字，或者顯示配對的分數（Score &#x2F; dG 值）過高，代表這條引子很容易自己「打結」，最好重新設計。</p>
 <p>Step 4: 揪出「交叉配對」 (Cross-Dimers)<br>這是 Multiple Primer Analyzer 最強大的功能！當你把 F 和 R 兩條引子同時貼進去時，系統會幫你檢查：</p>
 <p>引子二聚體 (Primer Dimer)：Forward 引子和 Reverse 引子會不會不去黏目標 DNA，反而互相擁抱黏在一起？</p>
 <p>尤其在引子的「3’ 端（尾巴）」如果發生連續幾個鹼基互補（或是出現重複的鹼基），這是最致命的！因為 DNA 聚合酶是從 3’ 端開始複製，一旦 3’ 端互相黏住，聚合酶就會立刻開始複製這個錯誤的二聚體，導致你的 PCR 產物全都是垃圾。</p>
@@ -239,7 +238,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ichika2004.github.io/Blog/2026/03/30/Week5/" data-id="cuidUyAQjJK7oIJfCT0d1-bBl" data-title="Week5" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://ichika2004.github.io/Blog/2026/03/30/Week5/" data-id="cuidlx8pXs1U-9DNjLUHkcbgO" data-title="Week5" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -313,7 +312,7 @@
           </li>
         
           <li>
-            <a href="/Blog/2026/02/24/Week2/">Week2</a>
+            <a href="/Blog/2026/02/24/%E7%AC%AC%E4%B8%80%E9%80%B1/">Week 1</a>
           </li>
         
       </ul>
