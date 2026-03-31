@@ -22,7 +22,7 @@
 <meta property="og:image" content="https://hackmd.io/_uploads/HJFZ9qyjWg.png">
 <meta property="og:image" content="https://hackmd.io/_uploads/H1wBcq1ibg.png">
 <meta property="article:published_time" content="2026-03-30T07:06:44.000Z">
-<meta property="article:modified_time" content="2026-03-30T07:09:31.144Z">
+<meta property="article:modified_time" content="2026-03-31T02:21:23.313Z">
 <meta property="article:author" content="Joey">
 <meta property="article:tag" content="Blog">
 <meta property="article:tag" content="Joey">
@@ -201,7 +201,7 @@
 </ol>
 <hr>
 <h2 id="Primer-BLAST"><a href="#Primer-BLAST" class="headerlink" title="Primer-BLAST"></a>Primer-BLAST</h2><p>在以前科學家必須手動計算 Tm 值，肉眼檢查有沒有互補，然後再去 BLAST 跑一次資料庫確認專一性，整個過程既痛苦又容易出錯。</p>
-<p>為了解救全人類的肝臟，NCBI 推出了一款集大成的終極工具：<strong>Primer-BLAST</strong>！</p>
+<p>為了解救全人類的肝臟，NCBI 推出了一款集大成的終極工具：(<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/tools/primer-blast/"><strong>Primer-BLAST</strong></a>)！</p>
 <p>這款工具完美結合了兩種強大的演算法，它其實是兩個引擎的合體：</p>
 <ol>
 <li><strong>Primer3 引擎</strong>：這是在背景負責「設計」的引擎。它會自動幫你計算 Tm 值、GC 含量（通常抓 40%~60%）、避免髮夾結構與自我互補，瞬間生出幾十組符合物理化學條件的引子候選人。</li>
@@ -219,9 +219,9 @@
 <p>Step 1: 輸入序列 (Input Sequences)<br>這款工具的介面通常很簡單。你只需要將設計好的引子（包含 Forward 和 Reverse）以特定的格式貼進文字方塊中。</p>
 <p>格式要求：通常是一行一個引子，前面寫引子名稱，空一格後貼上序列（只能有 A、T、C、G）。<br><img src="https://hackmd.io/_uploads/H1wBcq1ibg.png" alt="引子輸入結果"></p>
 <p>例如：<br>Forward_1 ATCGATCGATCGATCG<br>Reverse_1 CGATCGATCGATCGAT</p>
-<p>Step 2: 檢查 Tm 值與 GC 含量 (Tm and GC% Check)<br>按下分析後，系統會列出每一條引子的物理特性：</p>
+<p>Step 2: 檢查 Tm 值與 CG 含量 (Tm and CG% Check)<br>按下分析後，系統會列出每一條引子的物理特性：</p>
 <p>Tm 值匹配：再次確認 F 和 R 兩條引子的融解溫度是否夠接近（最好相差在 2~5°C 以內）。</p>
-<p>GC 含量：確認是否落在理想的 40%~60% 區間。</p>
+<p>CG 含量：確認是否落在理想的 40%~60% 區間。</p>
 <p>Step 3: 揪出「自我配對」與「髮夾結構」 (Self-Dimers &amp; Hairpins)<br>這是工具的第一大看點。系統會檢查同一條引子會不會自己發生悲劇：</p>
 <p>髮夾結構 (Hairpin)：引子的頭跟尾會不會剛好互補，導致自己摺疊起來變成一個髮夾的形狀？</p>
 <p>自我二聚體 (Self-Dimer)：兩條一模一樣的 Forward 引子，會不會在溶液中互相黏在一起？</p>
@@ -239,7 +239,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ichika2004.github.io/Blog/2026/03/30/Week5/" data-id="cuidjzeUfzmmxTFeITgfe3idK" data-title="Week5" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://ichika2004.github.io/Blog/2026/03/30/Week5/" data-id="cuidpWsq6AoxPs2PrgZw55E0N" data-title="Week5" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -313,7 +313,7 @@
           </li>
         
           <li>
-            <a href="/Blog/2026/02/24/%E7%AC%AC%E4%B8%80%E9%80%B1/">Week 1</a>
+            <a href="/Blog/2026/02/24/Week2/">Week2</a>
           </li>
         
       </ul>
