@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Week6 | Joey&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="STRSTR（Short Tandem Repeats，短片段重複序列）是現代法醫學與親子鑑定中最核心的「黃金標準」。 簡單來說，在人類的 DNA 中，存在著許多由 2 到 6 個鹼基（如 GATA）組成的短序列，它們會像口吃一樣「連續重複」出現（例如 GATA-GATA-GATA）。每個人在特定位點上的「重複次數」都不一樣，這就構成了每個人獨一無二的「基因指紋」。 在刑事鑑定與醫學應用上，STR">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Week6">
+<meta property="og:url" content="https://ichika2004.github.io/Blog/2026/03/31/Week6/index.html">
+<meta property="og:site_name" content="Joey&#39;s Blog">
+<meta property="og:description" content="STRSTR（Short Tandem Repeats，短片段重複序列）是現代法醫學與親子鑑定中最核心的「黃金標準」。 簡單來說，在人類的 DNA 中，存在著許多由 2 到 6 個鹼基（如 GATA）組成的短序列，它們會像口吃一樣「連續重複」出現（例如 GATA-GATA-GATA）。每個人在特定位點上的「重複次數」都不一樣，這就構成了每個人獨一無二的「基因指紋」。 在刑事鑑定與醫學應用上，STR">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://hackmd.io/_uploads/rkTb76uoWl.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/rJ0vQTusZx.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/ByvqXaOjbe.png">
+<meta property="article:published_time" content="2026-03-31T03:49:21.000Z">
+<meta property="article:modified_time" content="2026-03-31T03:49:58.462Z">
+<meta property="article:author" content="Joey">
+<meta property="article:tag" content="Blog">
+<meta property="article:tag" content="Joey">
+<meta property="article:tag" content="Personal">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hackmd.io/_uploads/rkTb76uoWl.png">
+  
+    <link rel="alternate" href="/Blog/atom.xml" title="Joey's Blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/Blog/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/Blog/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/Blog/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/Blog/" id="logo">Joey&#39;s Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/Blog/" id="subtitle">A personal blog by Joey</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/Blog/">Home</a>
+        
+          <a class="main-nav-link" href="/Blog/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/Blog/categories/bioinformatics/">生物資訊初探</a>
+        
+          <a class="main-nav-link" href="/Blog/categories/machine-learning/">機器學習筆記</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/Blog/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://ichika2004.github.io/Blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Week6" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/Blog/2026/03/31/Week6/" class="article-date">
+  <time class="dt-published" datetime="2026-03-31T03:49:21.000Z" itemprop="datePublished">2026-03-31</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/Blog/categories/bioinformatics/">生物資訊初探</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Week6
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="STR"><a href="#STR" class="headerlink" title="STR"></a>STR</h2><p>STR（Short Tandem Repeats，短片段重複序列）是現代法醫學與親子鑑定中最核心的「黃金標準」。</p>
+<p>簡單來說，在人類的 DNA 中，存在著許多由 2 到 6 個鹼基（如 GATA）組成的短序列，它們會像口吃一樣「連續重複」出現（例如 GATA-GATA-GATA）。每個人在特定位點上的「重複次數」都不一樣，這就構成了每個人獨一無二的「基因指紋」。</p>
+<p>在刑事鑑定與醫學應用上，STR 技術之所以無可取代，主要歸功於以下幾個重點優勢：</p>
+<ol>
+<li><p>片段極短，不怕樣本腐敗 (100-400 bp)<br>命案現場採集到的血液或毛髮，往往已經暴露在自然環境中很長一段時間，DNA 早就斷裂、降解。傳統的技術（如 RFLP）需要很長的完整 DNA 才能檢驗，而 STR 的目標片段非常短（通常只有 100 到 400 個鹼基對），即使 DNA 已經嚴重斷裂，依然有極高的機率能成功用 PCR 放大並檢驗出來。</p>
+</li>
+<li><p>具備「人類專屬性」<br>犯罪現場通常極度混亂，檢體可能會混入貓、狗、細菌或植物的 DNA。科學家在設計 STR 的檢測引子時，專門針對人類特有的序列進行設計，因此能完美過濾掉非人類的環境 DNA 干擾。</p>
+</li>
+<li><p>鑑別度極高 (99.999999% 以上)<br>如果只驗一個 STR 位點，可能會有兩個人剛好重複次數一樣；但如果同時檢驗 15 到 20 個不同的 STR 位點，要在世界上找到兩個 STR 組合完全一模一樣的人（除了同卵雙胞胎），機率低於百億分之一。</p>
+</li>
+</ol>
+<hr>
+<h3 id="STR-鑑定原理示意圖"><a href="#STR-鑑定原理示意圖" class="headerlink" title="STR 鑑定原理示意圖"></a>STR 鑑定原理示意圖</h3><p>假設我們現在檢驗的是「GATA」這個短重複序列（STR）：</p>
+<p><strong>1. 為什麼每個人的長度不同？</strong></p>
+<ul>
+<li><strong>嫌疑犯 A (重複 7 次)</strong>：長度較短<br><code>[GATA]-[GATA]-[GATA]-[GATA]-[GATA]-[GATA]-[GATA]</code></li>
+<li><strong>嫌疑犯 B (重複 9 次)</strong>：長度較長<br><code>[GATA]-[GATA]-[GATA]-[GATA]-[GATA]-[GATA]-[GATA]-[GATA]-[GATA]</code></li>
+</ul>
+<p><strong>2. 毛細管電泳的「波峰圖」比對 (DNA 指紋)</strong><br>經過儀器分析後，短的片段會跑得快，長的跑得慢，並在特定的長度位置形成「波峰（Peak）」。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">片段大小(長度)    140bp    160bp    180bp    200bp    220bp</span><br><span class="line">------------------------------------------------------------</span><br><span class="line">[犯罪現場毛髮]      ▲波峰     ▲波峰                       ▲波峰</span><br><span class="line">[嫌疑犯 A 的DNA]    ▲波峰     ▲波峰</span><br><span class="line">[嫌疑犯 B 的DNA]                               ▲波峰     ▲波峰</span><br><span class="line">------------------------------------------------------------</span><br></pre></td></tr></table></figure>
+
+<p><strong>鑑定結論</strong>：<br>您可以用肉眼直接對齊上面的表格！<strong>嫌疑犯 A</strong> 的波峰位置（140bp 與 160bp）與犯罪現場血液的波峰<strong>完全吻合</strong>。因此，法醫就可以判定現場的血液極有可能是嫌疑犯 A 留下的。</p>
+<h2 id="Multiple-Sequence-Alignment-by-CLUSTALW"><a href="#Multiple-Sequence-Alignment-by-CLUSTALW" class="headerlink" title="Multiple Sequence Alignment by CLUSTALW"></a>Multiple Sequence Alignment by CLUSTALW</h2><p>如果手邊已經不是只有「兩條」序列，而是有「三條、十條甚至上百條」來自不同物種的序列時，我們就需要進行多重序列排比 (Multiple Sequence Alignment, 簡稱 MSA)。就可使用 <a target="_blank" rel="noopener" href="https://www.genome.jp/tools-bin/clustalw">CLUSTALW</a> 。</p>
+<h3 id="核心功能：找出序列的「保守區」與「演化關係」"><a href="#核心功能：找出序列的「保守區」與「演化關係」" class="headerlink" title="核心功能：找出序列的「保守區」與「演化關係」"></a>核心功能：找出序列的「保守區」與「演化關係」</h3><p>ClustalW 的 “W” 代表 Weighting（權重）。它的核心邏輯是採用<strong>全域比對 (Global Alignment)</strong>，會盡可能地把所有輸入的序列從頭到尾對齊。</p>
+<p>透過這個網站，您可以達成兩個主要目的：</p>
+<ol>
+<li><strong>尋找保守區 (Conserved Regions)</strong>：看看這些不同物種的基因或蛋白質中，有哪些區段是經歷了千萬年演化卻「一個字都沒變」的。這些絕對不變的區域，通常就是這個蛋白質維持生命功能最核心的結構。</li>
+<li><strong>繪製演化樹 (Phylogenetic Tree)</strong>：藉由計算序列之間的差異程度，回推物種分家的先後順序。</li>
+</ol>
+<hr>
+<h3 id="網站操作四部曲"><a href="#網站操作四部曲" class="headerlink" title="網站操作四部曲"></a>網站操作四部曲</h3><p>這個網頁的介面雖然看起來像傳統的純文字風格，但其實非常強大且直覺：</p>
+<h4 id="Step-1-準備您的序列-FASTA-格式"><a href="#Step-1-準備您的序列-FASTA-格式" class="headerlink" title="Step 1: 準備您的序列 (FASTA 格式)"></a>Step 1: 準備您的序列 (FASTA 格式)</h4><p>在最大的空白文字框（Sequence input）中，您可以貼上多條序列。務必使用標準的 <strong>FASTA 格式</strong>：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;Species_A_Sequence</span><br><span class="line">ATCGATCGATCGATCGATCGATCGATCGATCGATCG</span><br><span class="line"></span><br><span class="line">&gt;Species_B_Sequence</span><br><span class="line">ATCGTTCGATCGATCGTTCGATCGATCGTTCGATCG</span><br><span class="line"></span><br><span class="line">&gt;Species_C_Sequence</span><br><span class="line">ATCGTTCGATGGATCGTTCGATGGATCGTTCGATGG</span><br></pre></td></tr></table></figure>
+<p><img src="https://hackmd.io/_uploads/rkTb76uoWl.png" alt="輸入DNA序列"></p>
+<h4 id="Step-2-選擇序列類型與比對矩陣"><a href="#Step-2-選擇序列類型與比對矩陣" class="headerlink" title="Step 2: 選擇序列類型與比對矩陣"></a>Step 2: 選擇序列類型與比對矩陣</h4><ul>
+<li><strong>DNA or Protein</strong>：告訴系統您貼上的是核酸還是胺基酸。</li>
+<li><strong>Pairwise Alignment &#x2F; Multiple Alignment 參數設定</strong>：<ul>
+<li><strong>Gap Open Penalty (開啟空位罰分)</strong>：打斷序列插入第一個空格要扣多少分。</li>
+<li><strong>Gap Extension Penalty (延伸空位罰分)</strong>：空格繼續延長要扣多少分。</li>
+<li><strong>Weight Matrix (權重矩陣)</strong>：如果是蛋白質，您可以選擇我們提過的 <strong>BLOSUM 矩陣</strong>（如 BLOSUM62）或 PAM 矩陣來作為計分標準。</li>
+</ul>
+</li>
+</ul>
+<h4 id="Step-3-執行與解讀排比結果-Alignment"><a href="#Step-3-執行與解讀排比結果-Alignment" class="headerlink" title="Step 3: 執行與解讀排比結果 (Alignment)"></a>Step 3: 執行與解讀排比結果 (Alignment)</h4><p>按下 <code>Execute Multiple Alignment</code> 後，系統會吐出一份排好隊的報告。請注意看每行序列最下方的「符號」，這是 ClustalW 的精華：</p>
+<ul>
+<li><code>*</code> <strong>(星號)</strong>：代表完美匹配！所有物種在這個位置的字母完全一模一樣（高度保守）。</li>
+<li><code>:</code> <strong>(冒號)</strong>：代表強烈相似。字母雖然不同，但它們的化學性質非常接近（例如都是帶正電的胺基酸），替換後對蛋白質功能影響不大。</li>
+<li><code>.</code> <strong>(句號)</strong>：代表微弱相似。化學性質有點像，但差異較大。</li>
+<li><strong>空白</strong>：完全不一樣，或是被插入了空位 (Gap, 顯示為 <code>-</code>)。<br><img src="https://hackmd.io/_uploads/rJ0vQTusZx.png" alt="比對結果"></li>
+</ul>
+<h4 id="Step-4-產出引導樹-Guide-Tree"><a href="#Step-4-產出引導樹-Guide-Tree" class="headerlink" title="Step 4: 產出引導樹 (Guide Tree)"></a>Step 4: 產出引導樹 (Guide Tree)</h4><p>在比對結果的下方，系統會自動生成一個樹狀圖（Dendrogram）。這是 ClustalW 在進行多重比對時，先兩兩計算距離所畫出來的初步演化樹，幫助您直觀地看出誰跟誰的血緣關係比較近。<br><img src="https://hackmd.io/_uploads/ByvqXaOjbe.png" alt="樹狀圖"></p>
+<hr>
+<h3 id="💡-小提醒：ClustalW-vs-MUSCLE"><a href="#💡-小提醒：ClustalW-vs-MUSCLE" class="headerlink" title="💡 小提醒：ClustalW vs. MUSCLE"></a>💡 小提醒：ClustalW vs. MUSCLE</h3><p>雖然 ClustalW 非常經典，但它有一個天生的弱點：<strong>它會「硬對齊」</strong>。</p>
+<p>如果您丟進去的三條序列長度差異極大（例如分別是 500 bp, 520 bp, 和 800 bp），ClustalW 為了把大家排整齊，會在短的序列裡面硬塞進超級多的「空位 (Gaps) <code>-</code>」，導致整個排比結果變得非常破碎且難以解讀。</p>
+<p>如果遇到序列數量極多、或是長度差異較大的情況，通常會改用另一套演算法 <strong>MUSCLE</strong>（MUSCLE 結合了全域與局部對齊的優點，不僅排起來的速度更快，處理 Gap 的邏輯也比 ClustalW 更聰明、更符合生物學的真實情況！）</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ichika2004.github.io/Blog/2026/03/31/Week6/" data-id="cuid1DMf_QKyuJ-DcSyl4rmmD" data-title="Week6" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/Blog/2026/03/30/Week5/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Week5</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/machine-learning/">機器學習筆記</a></li><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/bioinformatics/">生物資訊初探</a></li><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/%E9%96%92%E8%81%8A%E8%88%87%E5%85%AC%E5%91%8A/">閒聊與公告</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/Blog/archives/2026/03/">March 2026</a></li><li class="archive-list-item"><a class="archive-list-link" href="/Blog/archives/2026/02/">February 2026</a></li><li class="archive-list-item"><a class="archive-list-link" href="/Blog/archives/2023/05/">May 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/Blog/2026/03/31/Week6/">Week6</a>
+          </li>
+        
+          <li>
+            <a href="/Blog/2026/03/30/Week5/">Week5</a>
+          </li>
+        
+          <li>
+            <a href="/Blog/2026/03/17/Week4/">Week4</a>
+          </li>
+        
+          <li>
+            <a href="/Blog/2026/03/10/Week3/">Week3</a>
+          </li>
+        
+          <li>
+            <a href="/Blog/2026/02/25/%E6%AD%A1%E8%BF%8E%E4%BE%86%E5%88%B0-Joeys-Blog/">沒什麼，只是 Joey的 Blog</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2026 Joey<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/Blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/Blog/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/Blog/categories/bioinformatics/" class="mobile-nav-link">生物資訊初探</a>
+  
+    <a href="/Blog/categories/machine-learning/" class="mobile-nav-link">機器學習筆記</a>
+  
+</nav>
+    
+
+
+<script src="/Blog/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/Blog/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/Blog/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
