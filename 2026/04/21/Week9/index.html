@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Week9 | Joey&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="我們生活中到處都是酵素的應用，例如洗面乳裡的「酵素粉（用來溫和去除老廢角質）」或是洗潔精裡的「植萃酵素」。但如果要把酵素應用在嚴苛的工業或醫療環境中，我們面臨的最大挑戰就是：**如何讓它們不怕熱？**今天，就讓我們來揭開蛋白質「熱穩定性」的奧秘！ 什麼是「熱穩定性」？熱力學 vs. 動力學當我們說一個蛋白質具有「熱穩定性（Thermostability）」，意思是它在加熱的過程中，能夠維持其 3D">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Week9">
+<meta property="og:url" content="https://ichika2004.github.io/Blog/2026/04/21/Week9/index.html">
+<meta property="og:site_name" content="Joey&#39;s Blog">
+<meta property="og:description" content="我們生活中到處都是酵素的應用，例如洗面乳裡的「酵素粉（用來溫和去除老廢角質）」或是洗潔精裡的「植萃酵素」。但如果要把酵素應用在嚴苛的工業或醫療環境中，我們面臨的最大挑戰就是：**如何讓它們不怕熱？**今天，就讓我們來揭開蛋白質「熱穩定性」的奧秘！ 什麼是「熱穩定性」？熱力學 vs. 動力學當我們說一個蛋白質具有「熱穩定性（Thermostability）」，意思是它在加熱的過程中，能夠維持其 3D">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://hackmd.io/_uploads/SkoHfDNa-l.png">
+<meta property="og:image" content="https://life.nthu.edu.tw/~b841623/prion/protein3.GIF">
+<meta property="og:image" content="https://life.nthu.edu.tw/~b841623/prion/sprp-sc.gif">
+<meta property="article:published_time" content="2026-04-21T02:14:42.000Z">
+<meta property="article:modified_time" content="2026-04-21T03:49:07.006Z">
+<meta property="article:author" content="Joey">
+<meta property="article:tag" content="Blog">
+<meta property="article:tag" content="Joey">
+<meta property="article:tag" content="Personal">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hackmd.io/_uploads/SkoHfDNa-l.png">
+  
+    <link rel="alternate" href="/Blog/atom.xml" title="Joey's Blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/Blog/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/Blog/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/Blog/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/Blog/" id="logo">Joey&#39;s Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/Blog/" id="subtitle">A personal blog by Joey</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/Blog/">Home</a>
+        
+          <a class="main-nav-link" href="/Blog/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/Blog/categories/bioinformatics/">生物資訊初探</a>
+        
+          <a class="main-nav-link" href="/Blog/categories/machine-learning/">機器學習筆記</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/Blog/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://ichika2004.github.io/Blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Week9" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/Blog/2026/04/21/Week9/" class="article-date">
+  <time class="dt-published" datetime="2026-04-21T02:14:42.000Z" itemprop="datePublished">2026-04-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/Blog/categories/bioinformatics/">生物資訊初探</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Week9
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>我們生活中到處都是酵素的應用，例如洗面乳裡的「酵素粉（用來溫和去除老廢角質）」或是洗潔精裡的「植萃酵素」。但如果要把酵素應用在嚴苛的工業或醫療環境中，我們面臨的最大挑戰就是：**如何讓它們不怕熱？**今天，就讓我們來揭開蛋白質「熱穩定性」的奧秘！</p>
+<h2 id="什麼是「熱穩定性」？熱力學-vs-動力學"><a href="#什麼是「熱穩定性」？熱力學-vs-動力學" class="headerlink" title="什麼是「熱穩定性」？熱力學 vs. 動力學"></a>什麼是「熱穩定性」？熱力學 vs. 動力學</h2><p>當我們說一個蛋白質具有「熱穩定性（Thermostability）」，意思是它在加熱的過程中，能夠維持其 3D 立體結構與功能而不被破壞。<br><img src="https://hackmd.io/_uploads/SkoHfDNa-l.png" alt="SLC6A4結構"></p>
+<p>這在科學上可以分為兩個不同的層次：</p>
+<ol>
+<li><strong>熱力學穩定性 (Thermodynamic Stability)</strong>：<ul>
+<li>這是指蛋白質在「天然摺疊狀態」與「展開變性狀態」之間的自由能差 ($\Delta G$)。</li>
+<li>$\Delta G$ 越大，代表蛋白質越傾向維持摺疊好的狀態，高溫下不易變性。這通常與蛋白質內部的疏水核心、氫鍵與鹽橋等交互作用有關。</li>
+</ul>
+</li>
+<li><strong>動力學穩定性 (Kinetic Stability)</strong>：<ul>
+<li>這關注的是蛋白質變性過程中的「活化能障礙 ($E_a$)」。</li>
+<li>即使一個蛋白質的熱力學不穩定（高溫下最終會變性），但如果它的 $E_a$ 很高，它轉換成變性狀態的速度就會「非常慢」，因此能展現出高動力學穩定性。著名的狂牛症元兇 Prion 蛋白，就是具備極高動力學穩定性的例子——它極難展開，但一旦展開就再也難以復原！</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="什麼是Prion"><a href="#什麼是Prion" class="headerlink" title="什麼是Prion ?"></a>什麼是Prion ?</h3><p>Prion是由一種正常的細胞蛋白──PrPc經過改變而得。</p>
+<p>製造PrPc的基因僅含單一的exon，且在正常細胞中僅含一個PrPc基因；PrPc主要位於神經細胞的表面，以glycoinositol phospholipid與細胞膜連結；對蛋白質水解脢(Protease)有高度敏感性；推測其生理作用與突觸(synapse)的功能相關。</p>
+<p>經過改變的PrPc──PrPsc，則具有致病力。相較於PrPc，抵禦蛋白質分解脢的能力較強，不易被分解，在病患體內可見PrPsc堆積於細胞質小泡(cytoplasmic vesicles)中。</p>
+<h3 id="感染途徑"><a href="#感染途徑" class="headerlink" title="感染途徑"></a>感染途徑</h3><p>當一個正常的細胞接受了外來的PrPsc，將會使原本正常的PrPc轉變成PrPsc，進而致病。</p>
+<p>人體受Prion感染的途徑有二：</p>
+<p>後天感染：接受了已感染的物質，如食物ˋ注射ˋ移植等。<br>(此為大多數患者的感染途徑)</p>
+<p>遺傳：是體染色體遺傳(autosomal)，且為顯性(dominant)遺傳。<br>(並不常見)</p>
+<h3 id="為何Prion能導致疾病？"><a href="#為何Prion能導致疾病？" class="headerlink" title="為何Prion能導致疾病？"></a>為何Prion能導致疾病？</h3><p>比較PrPc與PrPsc，發現兩者並沒有化性的差異，連兩者胺基酸的組成都是一樣的；但事實顯示，PrPsc的致病率是PrPc的100,000倍，所以兩者必定有不同處。</p>
+<p>研究發現，而最可能的不同點，落在結構上。</p>
+<p>比較PrPc與PrPsc的蛋白質二級結構：PrPc主要結構是α-helix，幾乎沒有β-sheet；而改變後的PrPsc結構卻已β-sheet為主。</p>
+<p>PrPc轉換成PrPsc的機率並不高，但若PrPc的基因發生突變，則會大幅提高此轉換機率。</p>
+<p>至於PrPsc如何誘發正常的PrPc轉變結構？目前有一種結晶的理論，PrPsc進入神經細胞後，就取代原本的PrPc成為晶種，使得以後所製造的蛋白質結構仿照PrPsc的形式，故細胞將充滿不正常的Protein。</p>
+<table>
+<thead>
+<tr>
+<th align="center">Normal Prion (PrPc)</th>
+<th align="center">Disease Prion (PrPsc)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="https://life.nthu.edu.tw/~b841623/prion/protein3.GIF" alt="PrPc"></td>
+<td align="center"><img src="https://life.nthu.edu.tw/~b841623/prion/sprp-sc.gif" alt="PrPsc"></td>
+</tr>
+</tbody></table>
+<h2 id="為什麼我們需要「耐熱」的蛋白質？"><a href="#為什麼我們需要「耐熱」的蛋白質？" class="headerlink" title="為什麼我們需要「耐熱」的蛋白質？"></a>為什麼我們需要「耐熱」的蛋白質？</h2><p>將蛋白質改造得更穩定，有著極大的商業與醫療價值：</p>
+<ul>
+<li><strong>工業酵素</strong>：可以承受高溫、強酸鹼或有機溶劑（如高溫洗衣粉、造紙與生物燃料生產），並且能重複使用，延長反應時間並大幅降低製造成本。</li>
+<li><strong>蛋白質藥物（如抗體、干擾素）</strong>：穩定的蛋白質不易被分解，在血液中的半衰期更長（減少打針頻率），而且可以「擺脫冷鏈」，在室溫下儲存與運送，甚至利於開發成口服或貼片劑型！</li>
+</ul>
+<h2 id="如何幫蛋白質「練出抗熱體質」？4-大絕招！"><a href="#如何幫蛋白質「練出抗熱體質」？4-大絕招！" class="headerlink" title="如何幫蛋白質「練出抗熱體質」？4 大絕招！"></a>如何幫蛋白質「練出抗熱體質」？4 大絕招！</h2><p>要改造蛋白質，我們必須解決兩個問題：「要突變哪個胺基酸？」以及「要換成什麼胺基酸？」。生物資訊學提供了以下幾種強大的策略：</p>
+<h3 id="絕招-1：向大自然借鏡（尋找嗜熱菌同源蛋白）"><a href="#絕招-1：向大自然借鏡（尋找嗜熱菌同源蛋白）" class="headerlink" title="絕招 1：向大自然借鏡（尋找嗜熱菌同源蛋白）"></a>絕招 1：向大自然借鏡（尋找嗜熱菌同源蛋白）</h3><p>最簡單的方法就是直接去找生長在溫泉或火山口的「嗜熱菌」，拿它們的蛋白質來用。</p>
+<ul>
+<li>💡 <strong>台灣之光小故事</strong>：讓 PCR 技術得以普及的關鍵「耐高溫 Taq DNA 聚合酶」，其實是 1976 年由台灣科學家<strong>錢嘉韻教授</strong>率先從黃石公園的水生棲熱菌（<em>Thermus aquaticus</em>）中分離出來的！可惜當年她並未申請專利，後來 PCR 專利以 3 億美元天價轉讓時，她一毛錢都沒分到。</li>
+</ul>
+<h3 id="絕招-2：原始回歸-Ancestral-Sequence-Reconstruction"><a href="#絕招-2：原始回歸-Ancestral-Sequence-Reconstruction" class="headerlink" title="絕招 2：原始回歸 (Ancestral Sequence Reconstruction)"></a>絕招 2：原始回歸 (Ancestral Sequence Reconstruction)</h3><p>科學家利用多重序列比對與演化樹，回推數十億年前在嚴酷無氧、高溫的遠古海洋中，最原始的細菌擁有什麼樣的基因序列。透過電腦計算出這些「祖先序列」後，再用基因合成技術把它們「復活」，通常這些祖先蛋白都非常耐熱！</p>
+<h3 id="絕招-3：人工演化與洗牌-DNA-Domain-Shuffling"><a href="#絕招-3：人工演化與洗牌-DNA-Domain-Shuffling" class="headerlink" title="絕招 3：人工演化與洗牌 (DNA&#x2F;Domain Shuffling)"></a>絕招 3：人工演化與洗牌 (DNA&#x2F;Domain Shuffling)</h3><p>如果找不到嗜熱菌版本，科學家會把同一個家族裡各種不同的蛋白質基因「打碎再重新拼接」，就像洗牌一樣（模擬演化的基因重組），然後在實驗室裡篩選出運氣好、熱穩定性提高的嵌合蛋白（Chimeric variants）。</p>
+<h3 id="絕招-4：電腦輔助設計-In-silico-Computation"><a href="#絕招-4：電腦輔助設計-In-silico-Computation" class="headerlink" title="絕招 4：電腦輔助設計 (In silico Computation)"></a>絕招 4：電腦輔助設計 (In silico Computation)</h3><p>利用 AlphaFold 或同源模建預測出 3D 結構後，透過分子動力學模擬（MD）或軟體計算（如 FoldX、Rosetta 等），精準預測「點突變」是否能增加氫鍵、鹽橋或雙硫鍵，進而直接提高熱力學穩定性。</p>
+<hr>
+<h3 id="BLOSUM-與-PAM-矩陣"><a href="#BLOSUM-與-PAM-矩陣" class="headerlink" title="BLOSUM 與 PAM 矩陣"></a>BLOSUM 與 PAM 矩陣</h3><p>當我們在比對胺基酸序列，或決定要替換哪個胺基酸時，電腦是怎麼評估「合不合理」的呢？<br>因為胺基酸有 20 種，它們根據側鏈化學性質（極性、非極性、帶正負電等）被分為不同群組。科學家統計了自然界演化中「胺基酸互相替換的機率」，制定了計分矩陣：</p>
+<ul>
+<li><strong>BLOSUM 矩陣</strong>：最常用於 BLASTp 等序列排比軟體中。例如 <code>BLOSUM62</code> 適合比對中等親緣關係的蛋白質（這是預設值），<code>BLOSUM80</code> 用於非常親近的蛋白，而 <code>BLOSUM45</code> 則用來尋找演化差異極大的遠親。</li>
+<li>矩陣中分數越高（如正數），代表這種替換在演化上很常見且化學性質相似；分數為負，代表替換後極可能破壞蛋白質功能。</li>
+</ul>
+<h3 id="胺基酸替代矩陣-Substitution-Matrix"><a href="#胺基酸替代矩陣-Substitution-Matrix" class="headerlink" title="胺基酸替代矩陣 (Substitution Matrix)"></a>胺基酸替代矩陣 (Substitution Matrix)</h3><p>當我們在使用 BLAST 尋找相似的蛋白質序列時，電腦到底是怎麼給分的？</p>
+<p>如果用資料科學與機器學習的角度來看，序列排比（Sequence Alignment）其實就是一個尋找「最佳解」的最佳化問題，而<strong>替代矩陣（Substitution Matrix）就是這個演算法底層的「權重矩陣 (Weight Matrix)」或「評估函數」</strong>。</p>
+<h3 id="為什麼我們需要一個「矩陣」來計分？"><a href="#為什麼我們需要一個「矩陣」來計分？" class="headerlink" title="為什麼我們需要一個「矩陣」來計分？"></a>為什麼我們需要一個「矩陣」來計分？</h3><p>如果是比對 DNA（A、T、C、G），計分很簡單：一樣就加分，不一樣就扣分。<br>但蛋白質是由 20 種胺基酸組成的，事情就變得複雜了：</p>
+<ul>
+<li><strong>化學性質的相似性</strong>：有些胺基酸長得很像（例如都帶正電，或是都疏水）。在漫長的演化過程中，把 A 突變成性質相似的 B，蛋白質依然能正常運作（這稱為保守性突變）。</li>
+<li><strong>致命的突變</strong>：如果把一個極小的疏水性胺基酸，突變成一個巨大且帶電的胺基酸，蛋白質的 3D 結構可能會瞬間崩潰。</li>
+</ul>
+<p>因此，電腦不能單純地用「非黑即白（Match&#x3D;1, Mismatch&#x3D;0）」來評分。科學家透過統計自然界中已知蛋白質的突變機率，計算出每個胺基酸互相替換的**「Log-odds score」**，進而建立出這個 20x20 的計分矩陣。分數為正，代表這種替換在演化上很常見且合理；分數為負，代表這種替換極可能破壞生命功能。</p>
+<hr>
+<h3 id="兩大經典矩陣家族：PAM-vs-BLOSUM"><a href="#兩大經典矩陣家族：PAM-vs-BLOSUM" class="headerlink" title="兩大經典矩陣家族：PAM vs. BLOSUM"></a>兩大經典矩陣家族：PAM vs. BLOSUM</h3><p>根據 NCBI 的說明，目前學界最廣泛使用的有兩大矩陣家族，它們的建立邏輯與適用場景剛好相反：</p>
+<h3 id="1-PAM-矩陣-Point-Accepted-Mutation-——-「演化時間」的推演者"><a href="#1-PAM-矩陣-Point-Accepted-Mutation-——-「演化時間」的推演者" class="headerlink" title="1. PAM 矩陣 (Point Accepted Mutation) —— 「演化時間」的推演者"></a>1. PAM 矩陣 (Point Accepted Mutation) —— 「演化時間」的推演者</h3><ul>
+<li><strong>原理</strong>：PAM 是比較早期的矩陣。科學家先找了一群「血緣非常親近（相似度 &gt;85%）」的蛋白質，進行全域比對（Global Alignment）來觀察它們的突變。接著，利用馬可夫鏈（Markov Chain）的數學模型，把這些短時間內的突變機率「乘上去」，推演出長時間演化後的突變機率。</li>
+<li><strong>命名邏輯（數字越大，親緣越遠）</strong>：<ul>
+<li><strong>PAM30</strong>：適合比對非常相近的序列（短時間演化）。</li>
+<li><strong>PAM250</strong>：適合比對演化關係非常遙遠的序列。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-BLOSUM-矩陣-Blocks-Substitution-Matrix-——-「保守區塊」的實戰派"><a href="#2-BLOSUM-矩陣-Blocks-Substitution-Matrix-——-「保守區塊」的實戰派" class="headerlink" title="2. BLOSUM 矩陣 (Blocks Substitution Matrix) —— 「保守區塊」的實戰派"></a>2. BLOSUM 矩陣 (Blocks Substitution Matrix) —— 「保守區塊」的實戰派</h3><ul>
+<li><strong>原理</strong>：這是目前 BLASTp 的預設矩陣。科學家不再用數學推演，而是直接去資料庫裡抓取那些「高度保守、幾乎不變的區段（Blocks）」，進行局部比對（Local Alignment）並直接統計突變頻率。這讓 BLOSUM 在尋找蛋白質的「核心功能區域」時表現得極為優異。</li>
+<li><strong>命名邏輯（數字越小，親緣越遠，與 PAM 剛好相反！）</strong>：<ul>
+<li><strong>BLOSUM80</strong>：用於比對相似度極高（&gt;80%）的親近序列。</li>
+<li><strong>BLOSUM62</strong>：<strong>這是 BLASTp 的黃金預設值！</strong> 它的泛用性最強，適合比對中等距離的蛋白質。</li>
+<li><strong>BLOSUM45</strong>：用於尋找那些演化差異極大、非常遙遠的遠親序列。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="該選哪個矩陣？"><a href="#該選哪個矩陣？" class="headerlink" title="該選哪個矩陣？"></a>該選哪個矩陣？</h3><p>在 NCBI BLAST 的參數設定（Algorithm parameters）中，可以自由切換這些矩陣。挑選的秘訣如下：</p>
+<ol>
+<li><strong>一般未知情況</strong>：直接相信預設的 <strong>BLOSUM62</strong>，它在運算速度與準確率上取得了最佳平衡。</li>
+<li><strong>尋找失散多年的遠親</strong>：如果你用預設值找不到什麼結果，懷疑目標物種的演化距離很遠，請切換成 <strong>BLOSUM45</strong> 或 <strong>PAM250</strong>，並考慮同時調降「空位罰分 (Gap Penalty)」的權重。</li>
+<li><strong>區分非常相近的物種（例如不同品系的小鼠）</strong>：如果你要找的是極度相似的序列，請切換成 <strong>BLOSUM80</strong> 或 <strong>PAM30</strong>，這會讓演算法的「審查標準」變得更嚴格。</li>
+</ol>
+<hr>
+<h2 id="工具："><a href="#工具：" class="headerlink" title="工具："></a>工具：</h2><ol>
+<li><p><strong>BLASTp</strong>：蛋白質版本的搜尋引擎，用來在資料庫中尋找同源序列。</p>
+</li>
+<li><p><strong>CDD (Conserved Domain Database)</strong>：NCBI 提供的資料庫，可以分析未知的胺基酸序列到底屬於哪個功能模組（Domain），幫助我們猜測未知蛋白的功能。</p>
+</li>
+<li><p><strong><a target="_blank" rel="noopener" href="https://www.rcsb.org/">PDB</a>(Protein Data Bank)</strong>：全球最大的 3D 蛋白質結構資料庫，可以直接在線上搜尋並觀看分子的立體樣貌。</p>
+</li>
+<li><p><strong>PyMOL</strong>：強大的 3D 分子視覺化軟體。你可以輸入指令（如 <code>fetch 7NHR</code>）將 PDB 上的蛋白質抓下來，並利用 Cartoon（緞帶）或 Spheres（球狀）模式觀察它的骨架與表面結構。</p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ichika2004.github.io/Blog/2026/04/21/Week9/" data-id="cuidYSY1UrF2C1c88R841qWGL" data-title="Week9" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/Blog/2026/03/31/Week6/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Week6</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/machine-learning/">機器學習筆記</a></li><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/bioinformatics/">生物資訊初探</a></li><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/%E9%96%92%E8%81%8A%E8%88%87%E5%85%AC%E5%91%8A/">閒聊與公告</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/Blog/archives/2026/04/">April 2026</a></li><li class="archive-list-item"><a class="archive-list-link" href="/Blog/archives/2026/03/">March 2026</a></li><li class="archive-list-item"><a class="archive-list-link" href="/Blog/archives/2026/02/">February 2026</a></li><li class="archive-list-item"><a class="archive-list-link" href="/Blog/archives/2023/05/">May 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/Blog/2026/04/21/Week9/">Week9</a>
+          </li>
+        
+          <li>
+            <a href="/Blog/2026/03/31/Week6/">Week6</a>
+          </li>
+        
+          <li>
+            <a href="/Blog/2026/03/30/Week5/">Week5</a>
+          </li>
+        
+          <li>
+            <a href="/Blog/2026/03/17/Week4/">Week4</a>
+          </li>
+        
+          <li>
+            <a href="/Blog/2026/03/10/Week3/">Week3</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2026 Joey<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/Blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/Blog/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/Blog/categories/bioinformatics/" class="mobile-nav-link">生物資訊初探</a>
+  
+    <a href="/Blog/categories/machine-learning/" class="mobile-nav-link">機器學習筆記</a>
+  
+</nav>
+    
+
+
+<script src="/Blog/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/Blog/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/Blog/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
